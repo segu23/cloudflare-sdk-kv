@@ -3,6 +3,7 @@
 ## Usage/Examples
 
 ### Including the sdk in your project
+#### Maven
 ```xml
     <repository>
         <id>jitpack.io</id>
@@ -15,6 +16,21 @@
         <artifactId>cloudflare-sdk-kv</artifactId>
         <version>1.0</version>
     </dependency>
+```
+#### Gradle
+```gradle
+    dependencyResolutionManagement {
+		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+		repositories {
+			mavenCentral()
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+```gradle
+    dependencies {
+	        implementation 'com.github.segu23:cloudflare-sdk-kv:1.0'
+	}
 ```
 
 ### Initializing KV service
