@@ -2,6 +2,21 @@
 
 ## Usage/Examples
 
+### Including the sdk in your project
+```xml
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+```
+```xml
+    <dependency>
+        <groupId>com.github.segu23</groupId>
+        <artifactId>cloudflare-sdk-kv</artifactId>
+        <version>1.0</version>
+    </dependency>
+```
+
 ### Initializing KV service
 ```java
 IWorkerKVService workerKVService = CloudflareKVConfig.builder()
