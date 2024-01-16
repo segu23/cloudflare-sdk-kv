@@ -5,21 +5,21 @@
 ### Including the sdk in your project
 #### Maven
 ```xml
-    <repository>
-        <id>jitpack.io</id>
-        <url>https://jitpack.io</url>
-    </repository>
+	<repository>
+		<id>jitpack.io</id>
+		<url>https://jitpack.io</url>
+	</repository>
 ```
 ```xml
-    <dependency>
-        <groupId>com.github.segu23</groupId>
-        <artifactId>cloudflare-sdk-kv</artifactId>
-        <version>1.0</version>
-    </dependency>
+	<dependency>
+		<groupId>com.github.segu23</groupId>
+		<artifactId>cloudflare-sdk-kv</artifactId>
+		<version>1.0</version>
+	</dependency>
 ```
 #### Gradle
 ```gradle
-    dependencyResolutionManagement {
+	dependencyResolutionManagement {
 		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
 		repositories {
 			mavenCentral()
@@ -28,7 +28,7 @@
 	}
 ```
 ```gradle
-    dependencies {
+	dependencies {
 	        implementation 'com.github.segu23:cloudflare-sdk-kv:1.0'
 	}
 ```
