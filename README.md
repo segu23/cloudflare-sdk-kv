@@ -83,18 +83,16 @@ DeleteMultipleKeyValuePairsResponse deleteMultipleKeyValuePairsResponse = worker
 ```java
 WriteMultipleKeyValuePairsResponse writeMultipleKeyValuePairsResponse = workerKVService.writeMultipleKeyValuePairs(namespace.getId(), 
         new KeyValuePair[]{
-                KeyValuePair.builder()
-                        .key("firstKey")
-                        .value("example firstKey value")
-                        .metadata(Map.of(
+                new KeyValuePair()
+                        .setKey("firstKey")
+                        .setValue("example firstKey value")
+                        .setMetadata(Map.of(
                             "firstMetadata", "firstMetadata value", 
                             "secondMetadata", "secondMetadata value"
-                        ))
-                        .build(),
-                KeyValuePair.builder()
-                        .key("secondKey")
-                        .value("example secondKey value")
-                        .build()
+                        )),
+                new KeyValuePair()
+                        .setKey("secondKey")
+                        .setValue("example secondKey value")
         }
 );
 ```
