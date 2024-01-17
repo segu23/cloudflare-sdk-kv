@@ -28,6 +28,9 @@ public class KeyValuePair {
         this.value = value;
     }
 
+    public KeyValuePair() {
+    }
+
     public boolean isBase64() {
         return base64;
     }

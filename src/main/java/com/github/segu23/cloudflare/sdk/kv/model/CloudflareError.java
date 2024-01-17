@@ -14,6 +14,9 @@ public class CloudflareError {
         this.message = message;
     }
 
+    public CloudflareError() {
+    }
+
     public int getCode() {
         return code;
     }
