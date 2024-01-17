@@ -1,8 +1,8 @@
 package com.github.segu23.cloudflare.sdk.kv.service;
 
 import com.github.segu23.cloudflare.sdk.kv.exception.CloudflareException;
-import com.github.segu23.cloudflare.sdk.kv.model.Namespace;
 import com.github.segu23.cloudflare.sdk.kv.model.KeyValuePair;
+import com.github.segu23.cloudflare.sdk.kv.model.Namespace;
 import com.github.segu23.cloudflare.sdk.kv.response.*;
 
 import java.util.Map;

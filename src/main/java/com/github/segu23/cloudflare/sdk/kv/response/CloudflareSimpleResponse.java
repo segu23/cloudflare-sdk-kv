@@ -2,18 +2,22 @@ package com.github.segu23.cloudflare.sdk.kv.response;
 
 import com.github.segu23.cloudflare.sdk.kv.model.CloudflareError;
 import com.github.segu23.cloudflare.sdk.kv.model.Message;
-import com.github.segu23.cloudflare.sdk.kv.model.Namespace;
+import com.google.gson.annotations.SerializedName;
 
 import java.util.Arrays;
 
-public class CloudflareExceptionResponse {
+public class CloudflareSimpleResponse<T> {
 
+    @SerializedName("errors")
     private CloudflareError[] errors;
+    @SerializedName("messages")
     private Message[] messages;
-    private Namespace result;
+    @SerializedName("result")
+    private T result;
+    @SerializedName("success")
     private boolean success;
 
-    public CloudflareExceptionResponse(CloudflareError[] errors, Message[] messages, Namespace result, boolean success) {
+    public CloudflareSimpleResponse(CloudflareError[] errors, Message[] messages, T result, boolean success) {
         this.errors = errors;
         this.messages = messages;
         this.result = result;
@@ -36,11 +40,11 @@ public class CloudflareExceptionResponse {
         this.messages = messages;
     }
 
-    public Namespace getResult() {
+    public T getResult() {
         return result;
     }
 
-    public void setResult(Namespace result) {
+    public void setResult(T result) {
         this.result = result;
     }
 
@@ -54,7 +58,7 @@ public class CloudflareExceptionResponse {
 
     @Override
     public String toString() {
-        return "CloudflareExceptionResponse{" +
+        return "CloudflareSimpleResponse{" +
                 "errors=" + Arrays.toString(errors) +
                 ", messages=" + Arrays.toString(messages) +
                 ", result=" + result +
