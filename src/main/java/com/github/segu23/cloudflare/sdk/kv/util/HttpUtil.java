@@ -41,17 +41,15 @@ public class HttpUtil {
 
             String response = extractTextFromInputStream(connection.getInputStream());
 
-            return HttpResponse.builder()
-                    .body(response)
-                    .status(connection.getResponseCode())
-                    .build();
+            return new HttpResponse()
+                    .setBody(response)
+                    .setStatus(connection.getResponseCode());
         } catch (Exception e) {
             String response = extractTextFromInputStream(connection.getErrorStream());
             try {
-                return HttpResponse.builder()
-                        .body(response)
-                        .status(connection.getResponseCode())
-                        .build();
+                return new HttpResponse()
+                        .setBody(response)
+                        .setStatus(connection.getResponseCode());
             } catch (Exception exception) {
                 return new HttpResponse();
             }
@@ -78,17 +76,15 @@ public class HttpUtil {
 
             String response = extractTextFromInputStream(connection.getInputStream());
 
-            return HttpResponse.builder()
-                    .body(response)
-                    .status(connection.getResponseCode())
-                    .build();
+            return new HttpResponse()
+                    .setBody(response)
+                    .setStatus(connection.getResponseCode());
         } catch (Exception e) {
             String response = extractTextFromInputStream(connection.getErrorStream());
             try {
-                return HttpResponse.builder()
-                        .body(response)
-                        .status(connection.getResponseCode())
-                        .build();
+                return new HttpResponse()
+                        .setBody(response)
+                        .setStatus(connection.getResponseCode());
             } catch (Exception exception) {
                 return new HttpResponse();
             }
@@ -133,10 +129,9 @@ public class HttpUtil {
 
             String response = extractTextFromInputStream(httpResponse.getEntity().getContent());
 
-            return HttpResponse.builder()
-                    .body(response)
-                    .status(httpResponse.getStatusLine().getStatusCode())
-                    .build();
+            return new HttpResponse()
+                    .setBody(response)
+                    .setStatus(httpResponse.getStatusLine().getStatusCode());
         } catch (Exception e) {
             return new HttpResponse();
         }

@@ -10,6 +10,9 @@ public class HttpResponse {
         this.body = body;
     }
 
+    public HttpResponse() {
+    }
+
     public int getStatus() {
         return status;
     }

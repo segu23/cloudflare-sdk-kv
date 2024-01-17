@@ -2,14 +2,12 @@ package com.github.segu23.cloudflare.sdk.kv;
 
 import com.github.segu23.cloudflare.sdk.kv.service.IWorkerKVService;
 import com.github.segu23.cloudflare.sdk.kv.service.impl.WorkerKVServiceImpl;
-import lombok.Getter;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class CloudflareKVConfig {
 
-    @Getter
     private final Map<String, String> headers = new HashMap<>();
     private String cloudflareClientUrl = "https://api.cloudflare.com/client/v4";
     private String accountIdentifier;
@@ -44,6 +42,26 @@ public class CloudflareKVConfig {
     public CloudflareKVConfig setApiEmail(String apiEmail) {
         this.apiEmail = apiEmail;
         return this;
+    }
+
+    public String getCloudflareClientUrl() {
+        return cloudflareClientUrl;
+    }
+
+    public String getAccountIdentifier() {
+        return accountIdentifier;
+    }
+
+    public String getApiEmail() {
+        return apiEmail;
+    }
+
+    public String getApiKey() {
+        return apiKey;
+    }
+
+    public Map<String, String> getHeaders() {
+        return headers;
     }
 
     public IWorkerKVService build() {
