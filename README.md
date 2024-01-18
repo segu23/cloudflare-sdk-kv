@@ -14,7 +14,7 @@
 	<dependency>
 		<groupId>com.github.segu23</groupId>
 		<artifactId>cloudflare-sdk-kv</artifactId>
-		<version>1.1.1</version>
+		<version>1.1.2</version>
 	</dependency>
 ```
 #### Gradle
