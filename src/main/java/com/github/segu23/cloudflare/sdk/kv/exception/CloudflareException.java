@@ -4,7 +4,7 @@ import com.github.segu23.cloudflare.sdk.kv.response.CloudflareExceptionResponse;
 
 import java.util.Arrays;
 
-public class CloudflareException extends RuntimeException {
+public class CloudflareException extends Exception {
 
     private final CloudflareExceptionResponse cloudflareExceptionResponse;
 
